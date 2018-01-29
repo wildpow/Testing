@@ -113,7 +113,7 @@ describe('Project-1 Functions', () => {
     });
     it('should divide two numbers given and return results', ()=> {
       const divide = funcs.divide;
-      assert(divide(1,2), 1)
+      assert.equal(divide(1,2), .5)
     })
   });
 
@@ -124,7 +124,7 @@ describe('Project-1 Functions', () => {
     });
     it('should multiply two numbers given and return results', ()=> {
       const multiply = funcs.multiply;
-      assert(multiply(2,2), 4)
+      assert.equal(multiply(2,2), 4)
     });
   });
 
@@ -135,7 +135,7 @@ describe('Project-1 Functions', () => {
     });
     it('should find remainder two numbers given and return results', ()=> {
       const getRemainder = funcs.getRemainder;
-      assert(getRemainder(5,2), 1);
+      assert.equal(getRemainder(5,2), 1);
     });
     
   });
@@ -147,14 +147,19 @@ describe('Project-1 Functions', () => {
     });
     it('should check if number given is even and return a true', ()=> {
       const isEven = funcs.isEven;
-      assert(isEven(2), true);
+      assert.equal(isEven(2), true);
     });
+
   });
 
   describe('`isOdd`', () => {
     it('should be a function', () => {
       const isOdd = funcs.isOdd;
       assert.typeOf(isOdd, 'function');
+    });
+    it('should check if number given is odd and return a true', ()=> {
+      const isOdd = funcs.isOdd;
+      assert.equal(isOdd(1), true);
     });
   });
 
