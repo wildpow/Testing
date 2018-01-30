@@ -10,25 +10,31 @@ const funcs = require('../src/project-1');
 
 describe('Project-1 Functions', () => {
   describe('`multiplyByTen`', () => {
+    const multiplyByTen = funcs.multiplyByTen;
     it('should be a function', () => {
-      const multiplyByTen = funcs.multiplyByTen;
+      
       assert.typeOf(multiplyByTen, 'function');
     });
     it('should muiltiply a number by 10 and return the resault', () => {
-      const multiplyByTen = funcs.multiplyByTen;
       assert.equal(multiplyByTen(2), 20);
     })
+    it('return a number if a number is passed in', ()=> {
+      const twenty = multiplyByTen(2);
+      assert.typeOf(twenty, 'number')
+      assert.equal(twenty, 20)
+    });
     // begin here
   });
 
   describe('`subtractFive`', () => {
+    const subtractFive = funcs.subtractFive;
     it('should be a function', () => {
-      const subtractFive = funcs.subtractFive;
       assert.typeOf(subtractFive, 'function');
     });
     it('should subtract 5 from number given and return resaults', ()=> {
-      const subtractFive = funcs.subtractFive;
-      assert.equal(subtractFive(10), 5);
+      const five = subtractFive(10);
+      assert.typeOf(five, 'number')
+      assert.equal(five, 5);
     })
   });
 
